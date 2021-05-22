@@ -90,10 +90,13 @@ public class Job {
     }
     @Override
     public String toString() {
+        String showName;
         String showEmployer;
+        String showLocation;
+        String showPositionType;
         String showCoreCompetency;
 
-        if(this.getEmployer() == null ||this.getEmployer().getValue() == ""){
+        if(this.getEmployer() == null || this.getEmployer().getValue() == ""){
              showEmployer = "Data not available";
         } else {
             showEmployer = this.getEmployer().getValue();
@@ -105,21 +108,18 @@ public class Job {
             showCoreCompetency = this.getCoreCompetency().getValue();
         }
 
-        String showLocation;
         if (this.getLocation() == null || this.getLocation().getValue() == "") {
             showLocation = "Data not available";
         } else {
             showLocation = this.getLocation().getValue();
         }
 
-        String showPositionType;
         if (this.getPositionType() == null || this.positionType.getValue() == "") {
             showPositionType = "Data not available";
         } else {
             showPositionType = this.getPositionType().getValue();
         }
 
-        String showName;
         if (this.getName() == null ||this.getName() == "") {
             showName = "Data not available";
         } else {
@@ -132,13 +132,13 @@ public class Job {
           return  "\nOOPS! This job does not seem to exist.\n";
         }
 
-        String string = '\n' +
+        String techjobs = '\n' +
                         "ID: " + this.getId() + '\n' +
                         "Name: " +  showName + '\n' +
                         "Employer: " + showEmployer + '\n' +
                         "Location: " + showLocation + '\n' +
                         "Position Type: " +  showPositionType + '\n' +
                         "Core Competency: " + showCoreCompetency  + '\n';
-        return string;
+        return techjobs;
     }
 }
