@@ -1,11 +1,12 @@
 package org.launchcode.techjobs_oo.Tests;
 
-import org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+
+import static org.junit.Assert.*;
+
 public class JobTest {
     Job job1, job2,job3;
     @Before
@@ -28,7 +29,7 @@ public class JobTest {
     }
     @Test
     public void testJobsForEquality(){
-        assertFalse(job1.equals(job2));
+        assertNotEquals(job1,job2);
     }
     @Test
     public void shouldReturnABlankLine(){
